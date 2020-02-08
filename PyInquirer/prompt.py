@@ -65,7 +65,7 @@ def prompt(questions, answers=None, **kwargs):
             if callable(question.get('default')):
                 _kwargs['default'] = question['default'](answers)
             
-            application = getattr(prompts, type).question(message, **_kwargs)
+            application = getattr(prompts, type_).question(message, **_kwargs)
 
             answer = run_application(
                 application,
@@ -86,7 +86,7 @@ def prompt(questions, answers=None, **kwargs):
                 answers[name] = answer
         except AttributeError as e:
             print(e)
-            raise ValueError('No question type \'%s\'' % type)
+            raise ValueError('No question type \'%s\'' % type_)
         except KeyboardInterrupt as exc:
             if raise_kbi:
                 raise exc from None
