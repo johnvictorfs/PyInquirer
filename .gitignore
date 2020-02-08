@@ -18,6 +18,7 @@ bak
 output
 output_*
 research
+.venv
 venv
 venv3
 cache
