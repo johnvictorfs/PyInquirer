@@ -27,3 +27,7 @@ class PromptParameterException(ValueError):
 from .prompt import prompt
 from .separator import Separator
 from .prompts.common import default_style
+
+from prompt_toolkit.shortcuts import style_from_dict
+from prompt_toolkit.token import Token
+from prompt_toolkit.validation import Validator, ValidationError

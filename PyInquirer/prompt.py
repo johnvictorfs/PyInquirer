@@ -37,7 +37,7 @@ def prompt(questions, answers=None, **kwargs):
             _kwargs = {}
             _kwargs.update(kwargs)
             _kwargs.update(question)
-            type = _kwargs.pop('type')
+            type_ = _kwargs.pop('type')
             name = _kwargs.pop('name')
             message = _kwargs.pop('message')
             when = _kwargs.pop('when', None)
